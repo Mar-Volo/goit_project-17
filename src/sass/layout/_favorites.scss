@@ -1,0 +1,118 @@
+.section {
+  @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.link {
+  @extend %reset-link;
+}
+
+.list {
+  @extend %reset-list;
+}
+
+.conteiner {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.favorites__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+    line-height: calc(49 / 42);
+  }
+}
+
+.favorites__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 40px;
+  }
+}
+
+.favorites__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+}
+
+.favorites__item {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 32px * 1) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 32px * 2) / 3);
+  }
+}
+
+.border {
+  border: 11px solid var(--subscribe-btn-bg-accent-cl);
+  border-radius: 50%;
+
+  overflow: hidden;
+  padding: 18px 17px;
+
+  @media screen and (min-width: 768px) {
+    border: 14px solid var(--subscribe-btn-bg-accent-cl);
+
+    padding: 21px 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    border: 16px solid var(--subscribe-btn-bg-accent-cl);
+
+    padding: 25px 24px;
+  }
+}
+
+//   .border:hover,
+//   .border:focus {
+//     border: var(--btn-cl);
+//   }
