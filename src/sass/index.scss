@@ -1,2 +1,22 @@
 @import './common';
-@import './example';
+
+@import './utils/variables';
+@import './utils/placeholders';
+
+@import './base/base';
+@import './base/reset';
+
+@import './components/btn';
+@import './components/conteiner';
+@import './components/logo';
+@import './components/navigation';
+@import './components/slider';
+
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/offerings';
+@import './layout/favorites';
+@import './layout/customers-say';
+@import './layout/subscribe';
+@import './layout/footer';
