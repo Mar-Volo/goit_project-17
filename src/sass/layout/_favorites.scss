@@ -83,12 +83,23 @@
 }
 
 .favorites__item {
+  @media screen and (max-width: 767px) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 32px * 1) / 2);
   }
 
   @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 32px * 2) / 3);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--btn-cl);
   }
 }
 
