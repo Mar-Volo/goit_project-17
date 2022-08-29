@@ -92,4 +92,6 @@
   &:active {
     border-color: var(--btn-cl);
   }
+
+  transition: border-color var(--time-cubic);
 }
