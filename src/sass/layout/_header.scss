@@ -4,6 +4,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     height: 72px;
+    position: relative;
 
     @media screen and (min-width: 768px) {
         padding-left: 32px;
@@ -16,40 +17,47 @@
     }
 }
 
+.header__logo {
+    cursor: pointer;
+}
+
 .header__list {
     display: none;
+
     @media screen and (min-width: 768px) {
-            display: flex;
-            list-style: none;
-            padding-left: 0px;
-            margin-left: 191px;
-        }
-    
-    @media screen and (min-width: 1280px) {
-        margin-left: 735px;
+        display: flex;
+        list-style: none;
+        padding-left: 0px;
+        margin-left: auto;
     }
 }
 
-.header__button-mob {
+.header__mob-open {
     border: none;
     padding: 0px;
     background-color: #FEFEFE;
     fill: #7EB101;
     margin-left: auto;
+
     @media screen and (min-width: 768px) {
         display: none;
     }
-    @media screen and (min-width: 1280px) {
-        display: none;;
-    }
-}   
 
-.header__button-mob:focus {
+    @media screen and (min-width: 1280px) {
+        display: none;
+        ;
+    }
+}
+
+.header__mob-open:active {
     fill: #FFE550;
 }
 
 .header__button {
     display: none;
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @media screen and (min-width: 768px) {
         display: block;
         width: 100px;
@@ -57,16 +65,17 @@
         background: #BBF330;
         border-radius: 30px;
         border: none;
-        cursor: pointer;
-        transition: background-color var(--time-cubic);
+
         &:hover {
             background-color: #B5FF00;
+            ;
         }
-    }  
+    }
 }
 
 .header__batoon-text {
     display: none;
+
     @media screen and (min-width: 768px) {
         display: block;
         font-weight: 400;
@@ -80,12 +89,87 @@
     margin-right: 28px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
-
+    cursor: pointer;
+    text-decoration: none;
     color: #000000;
 }
 
 .item-color {
     color: #BBF330;
     text-decoration-line: underline;
+}
+
+// Бургер меню
+.header-mob-position {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+}
+
+.header__mob {
+    width: 130px;
+    height: 255px;
+    background-color: #FEFEFE;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+    border-radius: 30px 0px 30px 30px;
+    position: relative;
+    transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__mob-close {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    border: none;
+    background-color: inherit;
+    padding: 0px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #BBF330;
+    }
+}
+
+.header__mob-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.header__mob-item {
+    display: block;
+    padding: 16px 70px 16px 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background-color: #BBF330;
+        border-radius: 30px 0px 0px 0px;
+    }
+
+    &:hover .header__mob-button:hover {
+        background-color: #BBF330;
+    }
+}
+
+.active:hover {
+    border-radius: 0px 0px 30px 30px;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
