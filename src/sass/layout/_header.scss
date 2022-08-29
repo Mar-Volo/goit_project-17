@@ -58,6 +58,7 @@
         border-radius: 30px;
         border: none;
         cursor: pointer;
+        transition: background-color var(--time-cubic);
         &:hover {
             background-color: #B5FF00;
         }
