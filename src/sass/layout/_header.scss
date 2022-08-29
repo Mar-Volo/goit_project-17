@@ -57,11 +57,11 @@
         background: #BBF330;
         border-radius: 30px;
         border: none;
+        cursor: pointer;
         &:hover {
             background-color: #B5FF00;;
         }
-    } 
-    cursor: pointer;   
+    }  
 }
 
 .header__batoon-text {
