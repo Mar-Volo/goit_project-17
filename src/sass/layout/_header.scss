@@ -130,12 +130,12 @@
     top: 11px;
     right: 11px;
     border: none;
-    background-color: currentColor;
+    background-color: inherit;
     padding: 0px;
     cursor: pointer;
 
     &:hover {
-        background-color: #BBF330;
+        background-color: currentColor;
     }
 }
 
