@@ -176,10 +176,10 @@
 .documents-list {
   @extend %reset-list;
   display: flex;
-
+gap: 32px;
   @media screen and (max-width: 767px) {
     margin-bottom: 40px;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   @media screen and (min-width: 768px) {
