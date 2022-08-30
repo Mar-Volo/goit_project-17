@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="conteiner">
+  <div class="footer__conteiner conteiner">
     <div class="footer__wrap-desk">
       <div class="footer__wrapper">
         <a class="footer__logo" href="./index.html">
@@ -26,46 +26,46 @@
           </li>
         </ul>
       </div>
-
-      <strong class="footer-label__text">Subscribe</strong>
-      <form
-        class="footer__form"
-        name="signup_form"
-        autocomplete="on"
-        novalidate
-      >
-        <div class="input-wrap">
-          <input
-            class="subscribtion-form__input footer-label__input"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            pattern="^(.+)@(\ S+)$"
-            id="footer-form__title"
-          />
-          <label
-            class="subscribtion-form__title subscribtion-form__title--footer"
-            for="footer-form__title"
-          >
-            <svg class="subscribtion-form__icon" width="12" height="12">
-              <use
-                class="subscribtion-form__error"
-                href="./images/icons.svg#error"
-              ></use>
-            </svg>
-            <span
-              class="subscribtion-form__text-error subscribtion-form__text-error--footer"
-              >Not a valid email address (example@email.com)</span
+      <div class="footer__input">
+        <strong class="footer-label__text">Subscribe</strong>
+        <form
+          class="footer__form"
+          name="signup_form"
+          autocomplete="on"
+          novalidate
+        >
+          <div class="input-wrap">
+            <input
+              class="subscribtion-form__input footer-label__input"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              pattern="^(.+)@(\ S+)$"
+              id="footer-form__title"
+            />
+            <label
+              class="subscribtion-form__title subscribtion-form__title--footer"
+              for="footer-form__title"
             >
-          </label>
-        </div>
-        <button class="btn footer__btn" type="submit">Subscribe</button>
-      </form>
-
-      <p class="footer__text">
-        By subscribing you agree to with our
-        <a class="footer__link-doc" href="">Privacy Policy</a>
-      </p>
+              <svg class="subscribtion-form__icon" width="12" height="12">
+                <use
+                  class="subscribtion-form__error"
+                  href="./images/icons.svg#error"
+                ></use>
+              </svg>
+              <span
+                class="subscribtion-form__text-error subscribtion-form__text-error--footer"
+                >Not a valid email address (example@email.com)</span
+              >
+            </label>
+          </div>
+          <button class="btn footer__btn" type="submit">Subscribe</button>
+        </form>
+        <p class="footer__text">
+          By subscribing you agree to with our
+          <a class="footer__link-doc" href="">Privacy Policy</a>
+        </p>
+      </div>
     </div>
 
     <div class="documents-wrap">
