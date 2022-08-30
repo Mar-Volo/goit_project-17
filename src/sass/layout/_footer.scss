@@ -108,7 +108,10 @@
     text-decoration: underline;
   }
 }
-
+.footer__input {
+  display: flex;
+  flex-direction: column;
+}
 .footer-label__text {
   margin-bottom: 12px;
   font-weight: 600;
