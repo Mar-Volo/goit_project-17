@@ -80,7 +80,6 @@
 //   display: block;
 // }
 
-
 .footer__list {
   @extend %reset-list;
   display: flex;
@@ -111,7 +110,7 @@
 }
 
 .footer-label__text {
-  margin-bottom: 12px; 
+  margin-bottom: 12px;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
