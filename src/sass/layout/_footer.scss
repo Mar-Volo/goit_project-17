@@ -80,15 +80,6 @@
 //   display: block;
 // }
 
-.footer__form {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 20px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
 
 .footer__list {
   @extend %reset-list;
