@@ -23,3 +23,29 @@
     align-self: flex-start;
   }
 }
+
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--txt-cl);
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.subscribtion-form__btn {
+  min-width: 103px;
+  padding: 10px 20px;
+  background-color: var(--btn-cl);
+  border: none;
+  transition: background-color var(--time-cubic);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--accent-btn-cl);
+  }
+}
