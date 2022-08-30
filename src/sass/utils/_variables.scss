@@ -1,16 +1,22 @@
 :root {
-    --main-font: "Roboto", sans-serif;
-    --txt-cl: #2C2C2C;
-    --btn-cl: #BBF330;
-    --accent-btn-cl: #B5FF00;
-    --border-btn-cl: #7EB101;
-    --border-accent-btn-cl: #597D00;
-    --slider-btn-cl: #2C2C2C;
-    --slider-btn-accent-cl: #7EB101;
-    --subscribe-btn-border-cl: #7EB101;
-    --subscribe-btn-bg-accent-cl: #FFE550;
-    --input-default-cl: #FFE550;
-    --input-right-cl: #7EB101;
-    --input-error-cl: #FF705D;
-
+  --main-font: 'Roboto', sans-serif;
+  --txt-cl: #2c2c2c;
+  --btn-cl: #bbf330;
+  --accent-btn-cl: #b5ff00;
+  --border-btn-cl: #7eb101;
+  --border-accent-btn-cl: #597d00;
+  --slider-btn-cl: #2c2c2c;
+  --slider-btn-accent-cl: #7eb101;
+  --subscribe-btn-border-cl: #7eb101;
+  --subscribe-btn-bg-accent-cl: #ffe550;
+  --bgcolors: #fefefe;
+  --input-default-cl: #ffe550;
+  --input-right-cl: #7eb101;
+  --input-error-cl: #ff705d;
+  // Breakpoints
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1280px;
+  // Time-cubic
+  --time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
