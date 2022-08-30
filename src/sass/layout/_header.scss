@@ -180,13 +180,34 @@ box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
     top: 0px;
     left: 0px;
     overflow-y: scroll;
+      transition-property: opacity 250ms ease-out, visibility 250ms ease-out;
+      
+        transition-duration: 250ms;
+      
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      
+        transition-delay: 0.3s;
+z-index: 1000;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4) rotateY(1turn);
 }
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
+    opacity: 1;
     width: 320px;
     height: 449px;
     background: #FFE550;
