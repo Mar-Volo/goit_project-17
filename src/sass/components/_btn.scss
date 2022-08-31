@@ -1,0 +1,50 @@
+.footer__btn {
+  min-width: 103px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 17px;
+  background-color: var(--bgcolors);
+  border: 0.854167px solid var(--border-btn-cl);
+  border-radius: 30px;
+  transition: background-color var(--time-cubic);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--subscribe-btn-bg-accent-cl);
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    align-self: flex-start;
+  }
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--txt-cl);
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.subscribtion-form__btn {
+  min-width: 103px;
+  padding: 10px 20px;
+  background-color: var(--btn-cl);
+  border: none;
+  transition: background-color var(--time-cubic);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--accent-btn-cl);
+  }
+}

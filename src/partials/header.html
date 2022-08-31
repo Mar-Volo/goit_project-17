@@ -1,0 +1,90 @@
+<header class="header">
+  <div class="header__conteiner conteiner">
+    <a class="header__logo" href="/src/index.html">
+      <svg width=" 66" height="52">
+        <use href="./images/icons.svg#logo-icon"></use>
+      </svg>
+    </a>
+    <ul class="header__list">
+      <li><a class="header__item item-color" href="">Home</a></li>
+      <li><a class="header__item" href="">About</a></li>
+      <li><a class="header__item" href="">Service</a></li>
+      <li><a class="header__item" href="">Menu</a></li>
+      <li><a class="header__item" href="">Contact</a></li>
+    </ul>
+    <button type="button" class="header__mob-open" data-modal-open>
+      <svg width="28" height="28">
+        <use href="./images/icons.svg#burger-icon"></use>
+      </svg>
+    </button>
+    <button type="button" class="header__button" open>
+      <span class="header__batoon-text">Order Now</span>
+    </button>
+    <div class="header-mob-position is-hidden" data-modal>
+      <nav class="header__mob">
+        <button class="header__mob-close" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#Vector"></use>
+          </svg>
+        </button>
+        <ul class="header__mob-list">
+          <li><a class="header__mob-item" href="">Home</a></li>
+          <li><a class="header__mob-item" href="">About</a></li>
+          <li><a class="header__mob-item" href="">Service</a></li>
+          <li><a class="header__mob-item" href="">Menu</a></li>
+          <li><a class="header__mob-item active" href="">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="backdrop is-hidden" modal>
+  <div class="modal">
+    <button class="header__mob-close-modal" close>
+      <svg width="11" height="11">
+        <use href="./images/icons.svg#Vector"></use>
+      </svg>
+    </button>
+
+    <p class="modal-title">Order Form</p>
+
+    <label
+      ><span class="input-text">Name</span>
+      <input
+        type="text"
+        class="form-input"
+        name="user-name"
+        placeholder="Your name"
+        title="Jenny Wilson"
+        required
+        minlength="3"
+      />
+    </label>
+    <label
+      ><span class="input-text">Phone number</span>
+      <input
+        type="tel"
+        class="form-input"
+        name="user-tel"
+        placeholder="+38(0_ _) _ _ _ _ _ _ _"
+        title="+38099-444-22-11"
+        required
+      />
+    </label>
+    <label
+      ><span class="input-text">E-mail</span>
+      <input
+        type="email"
+        class="form-input"
+        name="user-email"
+        placeholder="example@gmail.com"
+        title="willie.jennings@example.com"
+        required
+      />
+    </label>
+    <button type="button" class="header__batoon-modal">
+      <span>Send</span>
+    </button>
+  </div>
+</div>

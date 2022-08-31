@@ -1,0 +1,343 @@
+.header {
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+}
+
+.header__conteiner {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 72px;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.header__logo {
+  cursor: pointer;
+}
+
+.header__list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin-left: auto;
+  }
+}
+
+.header__mob-open {
+  border: none;
+  padding: 0px;
+  background-color: #fefefe;
+  fill: #7eb101;
+  margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header__mob-open:active {
+  fill: #ffe550;
+}
+
+.header__button {
+  display: none;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 100px;
+    height: 32px;
+    background: #bbf330;
+    border-radius: 30px;
+    border: none;
+
+    &:hover {
+      background-color: #b5ff00;
+    }
+  }
+}
+
+.header__batoon-text {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #2c2c2c;
+  }
+}
+
+.header__item {
+  margin-right: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}
+
+.item-color {
+  color: #bbf330;
+  text-decoration-line: underline;
+}
+
+// Бургер меню
+.header-mob-position {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header__mob {
+  width: 130px;
+  height: 255px;
+  background-color: #fefefe;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  border-radius: 30px 0px 30px 30px;
+  position: relative;
+  transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__mob-close {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #bbf330;
+  }
+}
+
+.header__mob-list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.header__mob-item {
+  display: block;
+  padding: 16px 70px 16px 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #bbf330;
+    border-radius: 30px 0px 0px 0px;
+  }
+}
+
+.active:hover {
+  border-radius: 0px 0px 30px 30px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+// Modal
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow-y: scroll;
+  transition-property: opacity 250ms ease-out, visibility 250ms ease-out;
+
+  transition-duration: 250ms;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition-delay: 0.3s;
+  z-index: 1000;
+  background-color: rgba(187, 243, 48, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4) rotateY(1turn);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
+  opacity: 1;
+  width: 320px;
+  height: 449px;
+  background: #ffe550;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  padding: 32px;
+
+  @media screen and (min-width: 480px) {
+    width: 458px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 458px;
+  }
+}
+
+.header__mob-close-modal {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+}
+
+.input-text {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  color: #2c2c2c;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  margin-top: 2px;
+  margin-bottom: 24px;
+  padding-left: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  &:focus,
+  &:hover {
+    border: 2px solid #7eb101;
+  }
+}
+
+.header__batoon-modal {
+  width: 106px;
+  height: 40px;
+  border: 2px solid #7EB101;
+  border-radius: 30px;
+  background: #FFFFFF;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  bottom: 32px;
+  left: 107px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  color: #2C2C2C;
+  font-style: normal;
+
+  &:active {
+    background: #BBF330;
+  }
+
+  @media screen and (min-width: 480px) {
+    left: 176px;
+  }
+
+  @media screen and (min-width: 768px) {
+    left: 176px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 176px;
+  }
+}
+
+.header__batoon-text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  color: #2c2c2c;
+  font-style: normal;
+
+  &:active {
+    background: #bbf330;
+  }
+
+  @media screen and (min-width: 480px) {
+    left: 176px;
+  }
+
+  @media screen and (min-width: 768px) {
+    left: 176px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 176px;
+  }
+}
