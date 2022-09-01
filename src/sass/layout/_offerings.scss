@@ -112,8 +112,14 @@
     font-weight: 400;
     font-size: 14px;
     line-height: calc(21 / 14);
-
+    transition: border-color var(--time-cubic);
     color: #000000;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--border-accent-btn-cl);
+    }
   }
 
   &__btn:not(:first-child) {
@@ -324,7 +330,6 @@
   @media screen and (max-width: 767px) {
     margin-top: -315px;
   }
-  
 }
 
 @media screen and (min-width: 1280px) {

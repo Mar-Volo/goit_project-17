@@ -93,6 +93,13 @@
   cursor: pointer;
   text-decoration: none;
   color: #000000;
+  transition: text-decoration color var(--time-cubic);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    color: var(--btn-cl);
+  }
 }
 
 .item-color {

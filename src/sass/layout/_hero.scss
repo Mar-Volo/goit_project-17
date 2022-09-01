@@ -41,7 +41,7 @@
     border-radius: 30px;
     border: none;
     cursor: pointer;
-
+    transition: background-color var(--time-cubic);
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
@@ -51,6 +51,11 @@
     text-align: center;
 
     color: #2c2c2c;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--accent-btn-cl);
+    }
   }
 }
 
